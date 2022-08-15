@@ -14,9 +14,6 @@ export default {
       'https://api.nuxtjs.dev/mountains'
     ).then((res) => res.json())
 
-    console.log('filtered Mountain', params, redirect)
-
-
     const filteredMountain = mountains.find(
       (el) =>
         el.continent.toLowerCase() === params.continent &&
