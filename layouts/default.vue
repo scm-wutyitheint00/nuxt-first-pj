@@ -6,25 +6,19 @@
           <NuxtLink to="/">Home</NuxtLink>
         </li>
         <li>
-          <NuxtLink to="/about">About Page</NuxtLink>
+          <NuxtLink to="/parent">Parent</NuxtLink>
         </li>
       </ul>
     </nav>
     <main>
-      <img src="~/assets/logo.svg" />
       <Nuxt />
     </main>
   </div>
 </template>
 
 <style>
-/* home route and active route will show in bold as it matches / and /about */
-a.nuxt-link-active {
-  font-weight: bold;
-}
-/* exact link will show the primary color for only the exact matching link */
-a.nuxt-link-exact-active {
-  color: #00c58e;
+:root {
+  --primary-color: #00c58e;
 }
 
 body {
@@ -34,13 +28,26 @@ body {
   margin: 0;
 }
 
+a {
+  color: inherit;
+  text-decoration: none;
+}
+nav a:hover {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
 main {
   margin: 0 auto;
-  padding: 0 1rem;
   margin-top: 100px;
+  padding: 0 1rem;
   max-width: 1280px;
   text-align: center;
 }
+
 img {
   margin-bottom: 1rem;
 }
@@ -61,16 +68,7 @@ li {
 nav {
   padding: 0 1rem;
 }
-
-a,
-a:visited {
-  text-decoration: none;
-  color: inherit;
-}
-
-a:hover {
+a.nuxt-link-exact-active {
   color: #00c58e;
 }
-
-
 </style>
