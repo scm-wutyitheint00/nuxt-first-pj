@@ -11,7 +11,6 @@
       </ul>
     </nav>
     <main>
-      <img src="~/assets/logo.svg" />
       <Nuxt />
     </main>
   </div>
